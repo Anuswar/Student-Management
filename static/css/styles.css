@@ -1,0 +1,74 @@
+/* static/css/styles.css */
+
+/* Custom styles for the Student Management System */
+
+body {
+    padding-top: 56px; /* Ensure content doesn't hide under the navbar */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f8f9fa; /* Light background color */
+    padding: 0 0; /* Adjust padding as needed */
+    text-align: center;
+    position: relative; /* Ensure it stays at the bottom */
+    margin-top: 0; /* Push to the bottom */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.list-group-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Additional custom styles */
+h1 {
+    color: #333;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Example custom styles */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Adjust placeholder text color */
+.form-control::placeholder {
+    color: #a0a0a0;
+}
+
+/* Additional styles for error messages */
+.error-message {
+    color: #dc3545; /* Red color for error messages */
+    font-size: 0.875rem; /* Smaller font size for error messages */
+    margin-top: 4px; /* Add some spacing between input and error message */
+}
+
+.invalid-feedback {
+    color: #dc3545; /* Red color for error messages */
+}

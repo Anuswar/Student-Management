@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<h1>Courses</h1>
+<ul class="list-group">
+    {% for course in courses %}
+    <li class="list-group-item">
+        <a href="{% url 'course_detail' course.pk %}">{{ course.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<a class="btn btn-primary mt-3" href="{% url 'course_create' %}">Add new course</a>
+{% endblock %}

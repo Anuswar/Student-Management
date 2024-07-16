@@ -1,0 +1,40 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Enrollments{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary mt-3" href="{% url 'enrollment_create' %}">Add new enrollment</a>
+<br>
+<h1>Enrollments</h1>
+{% for course in courses %}
+    <h2>{{ course.name }}</h2>
+    {% if course.enrollment_set.all %}
+        <div class="table-wrapper">
+            <div class="scrollable-table">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Date of Birth</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for enrollment in course.enrollment_set.all %}
+                            <tr>
+                                <td>{{ enrollment.student.first_name }}</td>
+                                <td>{{ enrollment.student.last_name }}</td>
+                                <td>{{ enrollment.student.date_of_birth }}</td>
+                                <td>{{ enrollment.student.email }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% else %}
+        <p>No students enrolled in this course.</p>
+    {% endif %}
+{% endfor %}
+{% endblock %}
